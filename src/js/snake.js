@@ -27,7 +27,7 @@ function snake() {
       let pos = this.tail[i];
       let d = dist(this.x, this.y, pos.x, pos.y);
       if (d < 1) {
-        console.log('starting over');
+        console.log('game over');
         this.x = 0;
         this.y = 0;
         this.xspeed = 1;
