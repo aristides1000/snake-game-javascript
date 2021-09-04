@@ -11,7 +11,7 @@
 - ESLint
 ## Live Demo
 
-[Live Demo Link](https://raw.githack.com/aristides1000/leaderboard/final-touches/dist/index.html)
+[Live Demo Link](https://raw.githack.com/aristides1000/snake-game-javascript/snake-game/index.html)
 
 
 ## Getting Started
