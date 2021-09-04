@@ -28,6 +28,10 @@ function snake() {
       let d = dist(this.x, this.y, pos.x, pos.y);
       if (d < 1) {
         console.log('starting over');
+        this.x = 0;
+        this.y = 0;
+        this.xspeed = 1;
+        this.yspeed = 0;
         this.total = 0;
         this.tail = [];
       }

@@ -42,10 +42,10 @@ function keyPressed() {
     s.dir(-1, 0);
     return;
   } if (direction === 'up' && (keyCode === DOWN_ARROW)) {
-    s.dir(0, 1);
+    s.dir(0, -1);
     return;
   } if (direction === 'down' && (keyCode === UP_ARROW)) {
-    s.dir(0, -1);
+    s.dir(0, 1);
     return;
   }
 
