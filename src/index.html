@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <script src="../libs/p5.js"></script>
+    <script src="../libs/p5.sound.js"></script>
+    <link rel="shortcut icon" href="./img/snake-logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="mt-2 mb-2 color-title font-size-title">Snake Game</h1>
+        </div>
+      </div>
+
+      <!-- Begin Opening Game Block -->
+      <div class="row" id="openingGame">
+        <div class="col-12">
+          <div class="text-center opening-game-box mt-5 pb-5">
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <div class="row">
+                    <div class="col-12">
+                      <img src="./img/snake-logo.png" alt="snake-image" class="snake-logo">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="mt-5 mb-2 color-title">High Score: <span id="openingHighScore"></span></h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 ">
+                      <button id="playButton" class="play-btn mt-5 py-2 px-5" type="button">Play</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Opening Game Block -->
+
+      <!-- Begin Game Over Block -->
+      <div class="row d-none" id="gameOver">
+        <div class="col-12">
+          <div class="text-center game-over-box mt-5 pb-5">
+            <h1 class="mt-5 mb-2 color-title">Game Over</h1>
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="mt-5 mb-2 color-title">Score: <span id="gameOverScore"></span></h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="mt-5 mb-2 color-title">High Score: <span id="gameOverHighScore"></span></h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <button id="restartButton" class="restart-btn mt-5 fs-4 p-2" type="button">Restart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Game Over Block -->
+
+      <!-- Begin Pause Game Block -->
+      <div class="row d-none" id="pauseGame">
+        <div class="col-12">
+          <div class="text-center game-over-box mt-5 pb-5">
+            <h1 class="mt-5 mb-2 color-title">Pause</h1>
+            <div class="row">
+              <div class="col-12">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="mt-5 mb-2 color-title">Score: <span id="pauseScore"></span></h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <h2 class="mt-5 mb-2 color-title">High Score: <span id="pauseHighScore"></span></h2>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <button id="continueButton" class="restart-btn mt-5 fs-4 p-2" type="button">Continue</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Pause Game Block -->
+
+      <!-- Begin Game Block -->
+      <div class="row d-none" id="canvasDisplay">
+        <div class="col-12">
+          <div class="row">
+            <div class="col-12 d-flex justify-content-between">
+              <h2 class="color-title">Score: <span id="mainScoreGame"></span></h2>
+              <h2 class="color-title">High Score: <span id="mainHighScoreGame"></span></h2>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div id="canvas-container">
+                <main class="border-game">
+                </main>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Game Block -->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script src="./js/sketch.js"></script>
+    <script src="./js/snake.js"></script>
+    <script src="./js/interface.js"></script>
+  </body>
+</html>

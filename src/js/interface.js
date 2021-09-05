@@ -1,5 +1,7 @@
 /* eslint-disable no-undef */
 
+import _ from 'lodash';
+
 const playButton = document.getElementById('playButton');
 const continueButton = document.getElementById('continueButton');
 const restartButton = document.getElementById('restartButton');

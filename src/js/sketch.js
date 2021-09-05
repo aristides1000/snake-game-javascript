@@ -1,6 +1,8 @@
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
+import _ from 'lodash';
+
 let s;
 const scl = 20;
 
