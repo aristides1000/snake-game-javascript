@@ -10,26 +10,39 @@ const pauseGame = document.getElementById('pauseGame');
 const canvasDisplay = document.getElementById('canvasDisplay');
 
 let gameState = 'opening';
-console.log(gameState);
+
+function restoreScore() {
+  document.getElementById('mainScoreGame').textContent = s.score;
+}
 
 playButton.addEventListener('click', () => {
   openingGame.classList.add('d-none');
   canvasDisplay.classList.remove('d-none');
   gameState = 'play';
-  console.log(gameState);
   s.restart();
+  restoreScore();
+  console.log(s.highScore);
+  if (s.highScore === 0) {
+    s.highScore = 0;
+  }
+  document.getElementById('mainHighScoreGame').textContent = s.highScore;
 });
 
 restartButton.addEventListener('click', () => {
   gameOver.classList.add('d-none');
   canvasDisplay.classList.remove('d-none');
+  document.getElementById('mainScoreGame').textContent = s.score;
+  document.getElementById('mainHighScoreGame').textContent = s.highScore;
   s.restart();
+  restoreScore();
 });
 
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && gameState === 'play') {
     canvasDisplay.classList.add('d-none');
     pauseGame.classList.remove('d-none');
+    document.getElementById('pauseScore').textContent = s.score;
+    document.getElementById('pauseHighScore').textContent = s.highScore;
     gameState = 'pause';
   }
 

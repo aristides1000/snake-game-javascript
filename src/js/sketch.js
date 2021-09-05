@@ -26,6 +26,7 @@ function draw() {
   if (s.eat(food)) {
     pickLocation();
   }
+  s.onload();
   s.death();
   s.update();
   s.show();

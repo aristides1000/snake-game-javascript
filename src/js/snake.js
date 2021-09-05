@@ -5,18 +5,33 @@ class snake {
     this.y = 0;
     this.xspeed = 1;
     this.yspeed = 0;
+    this.score = 0;
+    this.highScore = 0;
     this.total = 0;
     this.tail = [];
+    
+    this.onload = () => {
+      document.getElementById('openingHighScore').textContent = this.highScore;
+    };
 
     this.eat = function (pos) {
       let d = dist(this.x, this.y, pos.x, pos.y);
       if (d < 1) {
         this.total++;
+        this.addScore();
         return true;
       } else {
         return false;
       }
     };
+
+    this.addScore = () => {
+      this.score += 1 * 100;
+      document.getElementById('mainScoreGame').textContent = this.score;
+      this.updateHighScore();
+      document.getElementById('mainHighScoreGame').textContent = s.highScore;
+    };
+
 
     this.dir = function (x, y) {
       this.xspeed = x;
@@ -35,8 +50,15 @@ class snake {
     };
 
     this.gameOver = () => {
+      this.updateHighScore();
+      document.getElementById('gameOverScore').textContent = this.score;
+      document.getElementById('gameOverHighScore').textContent = this.highScore;
       document.getElementById('canvasDisplay').classList.add('d-none');
       document.getElementById('gameOver').classList.remove('d-none');
+    };
+
+    this.updateHighScore = () => {
+      this.highScore = this.score > this.highScore ? this.score : this.highScore;
     };
 
     this.restart = () => {
@@ -45,6 +67,7 @@ class snake {
       this.xspeed = 1;
       this.yspeed = 0;
       this.total = 0;
+      this.score = 0;
       this.tail = [];
     };
 
