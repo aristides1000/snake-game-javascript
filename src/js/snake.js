@@ -1,5 +1,7 @@
-/* eslint-disable linebreak-style */
-class snake {
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
+
+class Snake {
   constructor() {
     this.x = 0;
     this.y = 0;
@@ -14,15 +16,14 @@ class snake {
       document.getElementById('openingHighScore').textContent = this.highScore;
     };
 
-    this.eat = function (pos) {
-      let d = dist(this.x, this.y, pos.x, pos.y);
+    this.eat = (pos) => {
+      const d = dist(this.x, this.y, pos.x, pos.y);
       if (d < 1) {
-        this.total++;
+        this.total += 1;
         this.addScore();
         return true;
-      } else {
-        return false;
       }
+      return false;
     };
 
     this.addScore = () => {
@@ -32,15 +33,15 @@ class snake {
       document.getElementById('mainHighScoreGame').textContent = s.highScore;
     };
 
-    this.dir = function (x, y) {
+    this.dir = (x, y) => {
       this.xspeed = x;
       this.yspeed = y;
     };
 
-    this.death = function () {
-      for (let i = 0; i < this.tail.length; i++) {
-        let pos = this.tail[i];
-        let d = dist(this.x, this.y, pos.x, pos.y);
+    this.death = () => {
+      for (let i = 0; i < this.tail.length; i += 1) {
+        const pos = this.tail[i];
+        const d = dist(this.x, this.y, pos.x, pos.y);
         if (d < 1) {
           this.gameOver();
           this.restart();
@@ -70,9 +71,9 @@ class snake {
       this.tail = [];
     };
 
-    this.update = function () {
+    this.update = () => {
       if (this.total === this.tail.length) {
-        for (let i = 0; i < this.tail.length - 1; i++) {
+        for (let i = 0; i < this.tail.length - 1; i += 1) {
           this.tail[i] = this.tail[i + 1];
         }
       }
@@ -87,7 +88,7 @@ class snake {
 
     this.show = () => {
       fill(200);
-      for (let i = 0; i < this.tail.length; i++) {
+      for (let i = 0; i < this.tail.length; i += 1) {
         rect(this.tail[i].x, this.tail[i].y, scl, scl);
       }
       rect(this.x, this.y, scl, scl);

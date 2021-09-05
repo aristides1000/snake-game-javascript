@@ -1,4 +1,4 @@
-/* eslint-disable linebreak-style */
+/* eslint-disable no-undef */
 
 const playButton = document.getElementById('playButton');
 const continueButton = document.getElementById('continueButton');
@@ -21,7 +21,6 @@ playButton.addEventListener('click', () => {
   gameState = 'play';
   s.restart();
   restoreScore();
-  console.log(s.highScore);
   if (s.highScore === 0) {
     s.highScore = 0;
   }

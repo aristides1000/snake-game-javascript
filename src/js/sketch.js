@@ -1,4 +1,6 @@
-/* eslint-disable linebreak-style */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 let s;
 const scl = 20;
 
@@ -8,7 +10,7 @@ let direction = 'right';
 
 function setup() {
   createCanvas(600, 600);
-  s = new snake();
+  s = new Snake();
   frameRate(10);
   pickLocation();
 }
