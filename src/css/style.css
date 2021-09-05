@@ -20,7 +20,7 @@ body {
 
 .color-title {
   color: rgb(201, 201, 201);
-  font-family: 'll-pixel';
+  font-family: 'll-pixel', sans-serif;
 }
 
 .font-size-title {
@@ -28,7 +28,7 @@ body {
 }
 
 .restart-btn {
-  font-family: 'll-pixel';
+  font-family: 'll-pixel', sans-serif;
   background-color: black;
   color: rgb(201, 201, 201);
 }
@@ -65,12 +65,12 @@ body {
 }
 
 .play-btn {
-  font-family: 'll-pixel';
+  font-family: 'll-pixel', sans-serif;
   background-color: black;
   color: rgb(201, 201, 201);
   padding: 10px;
   width: auto;
-  overflow:hidden;
+  overflow: hidden;
   animation-duration: 0.7s;
   animation-name: changeFontSize;
   animation-iteration-count: infinite;

@@ -9,7 +9,7 @@ class snake {
     this.highScore = 0;
     this.total = 0;
     this.tail = [];
-    
+
     this.onload = () => {
       document.getElementById('openingHighScore').textContent = this.highScore;
     };
@@ -31,7 +31,6 @@ class snake {
       this.updateHighScore();
       document.getElementById('mainHighScoreGame').textContent = s.highScore;
     };
-
 
     this.dir = function (x, y) {
       this.xspeed = x;
