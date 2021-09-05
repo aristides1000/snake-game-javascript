@@ -1,7 +1,10 @@
 # Snake Game Javascript
 
 > This is a JavaScript project based on the snake game.
-![screenshot](./app_screenshot.png)
+![screenshot](./app_screenshot1.png)
+![screenshot](./app_screenshot2.png)
+![screenshot](./app_screenshot3.png)
+![screenshot](./app_screenshot4.png)
 
 ## Built With
 
