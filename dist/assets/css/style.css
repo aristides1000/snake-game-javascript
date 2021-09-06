@@ -1,0 +1,82 @@
+@font-face {
+  font-family: 'll-pixel';
+  src: url(../fonts/LLPIXEL3.ttf);
+}
+
+body {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-image: url(../img/background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.border-game {
+  border: 30px solid #000;
+}
+
+.color-title {
+  color: rgb(201, 201, 201);
+  font-family: 'll-pixel', sans-serif;
+}
+
+.font-size-title {
+  font-size: 50px;
+}
+
+.restart-btn {
+  font-family: 'll-pixel', sans-serif;
+  background-color: black;
+  color: rgb(201, 201, 201);
+}
+
+.game-over-box {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding-top: 1px;
+  padding-left: 200px;
+  padding-right: 200px;
+  border: 30px solid #000;
+}
+
+.snake-logo {
+  width: 30%;
+}
+
+.opening-game-box {
+  background-color: rgba(0, 0, 0, 0.35);
+  padding-top: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 30px solid #000;
+  min-height: 545px;
+}
+
+@keyframes changeFontSize {
+  from {
+    font-size: 50px;
+  }
+
+  to {
+    font-size: 80px;
+  }
+}
+
+.play-btn {
+  font-family: 'll-pixel', sans-serif;
+  background-color: black;
+  color: rgb(201, 201, 201);
+  padding: 10px;
+  width: auto;
+  overflow: hidden;
+  animation-duration: 0.7s;
+  animation-name: changeFontSize;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.score-width {
+  width: 600px;
+}
